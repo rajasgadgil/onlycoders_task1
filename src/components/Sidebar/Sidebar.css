@@ -1,0 +1,33 @@
+.sidebar {
+    background: red;
+    z-index: 1;
+    border: none;
+    position: absolute;
+    width:  5%;      
+    top: 0;
+    left: 0;
+    bottom: 0;
+    transition-duration: 0.5s;
+
+    /* animation-duration: 2000s;
+    width: 100%;
+     */
+
+}
+
+.sidebarfull {
+    background: red;
+    z-index: 1;
+    border: none;
+    position: absolute;
+    width:  15%;      
+    top: 0;
+    left: 0;
+    bottom: 0;
+    transition-duration: 0.5s;
+
+    /* animation-duration: 2000s;
+    width: 100%;
+     */
+
+}

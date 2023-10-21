@@ -1,0 +1,34 @@
+.dashboardsidebar {
+    z-index: 999;
+    border: solid;
+    width: 5%;
+    position: absolute; 
+    height: auto; 
+    box-sizing: border-box;
+    overflow: hidden;
+    transition-duration: 0.5s;
+}
+
+.dashboardsidebar ul li, .dashboardsidebarfull ul li{
+    z-index: 1;
+    margin-top: 1em; 
+    display: flex;
+    width: 100%;
+    border: solid;  
+ 
+}
+
+.dashboardsidebarfull {
+    transition-duration: 0.5s;
+    z-index: 9;
+    border: solid;
+    width: 15%;
+    position: absolute; 
+    box-sizing: border-box;
+}
+
+
+.active {
+    background-color: #00D2E1;
+    box-shadow: 10px 10px 10px #D8F8FB;
+}

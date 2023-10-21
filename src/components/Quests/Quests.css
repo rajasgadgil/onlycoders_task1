@@ -1,0 +1,16 @@
+.quests{
+
+    border-radius: 15px 15px 15px 15px;
+    background: white;
+    padding: 1.3em;
+    margin-top: 2em;
+  
+
+
+}
+
+.vertical-line{
+    border: 2pt solid #E7E8F0;
+    border-radius: 20px 20px 20px 20px;
+    margin-top: 1em;
+}

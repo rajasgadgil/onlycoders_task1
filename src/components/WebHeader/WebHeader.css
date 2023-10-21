@@ -1,0 +1,6 @@
+.webheader {
+    border: solid;
+    background-position: center;
+    background-size: 100% 100%;
+    display: flex;
+}
