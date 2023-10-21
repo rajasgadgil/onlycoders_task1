@@ -10,20 +10,19 @@ import DashboardSidebar from "./components/Sidebar/DashboardSideBar/index.js";
 import Feed from "./components/Feed";
 import Badges from "./components/Badges";
 import Quests from "./components/Quests";
-import PopularMembers from "./components/PopularMembers";
-import { animated, useSpring } from '@react-spring/web'
+import PopularGroups from "./components/PopularGroups";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Sidebar from "./components/Sidebar";
+import { useTransition, animated, useSpring } from '@react-spring/web'
 
+function App({ data = [1, 2, 3] }) {
+ 
 
-function App() {
 
   return (
+   <>
 
-    <div>
-
-
-      <Header />
+     <Header />
       <DashboardSidebar/>
       <Sidebar/>
     <div className="container main-div">
@@ -39,15 +38,17 @@ function App() {
             <Feed />
           </div>
           <div className="col-3">
-          <PopularMembers />
+          <PopularGroups />
 
             <Badges />
           </div>
         </div>
-    </div>
+    
     <div className="footer">All Rights Reserved</div>
 
     </div>
+
+    </>
   );
 }
 

@@ -24,7 +24,9 @@ function Sidebar(props) {
     <>
       <OutsideClickHandler
         onOutsideClick={() => {
-          alert("You clicked outside of this component!!!");
+          setClicked(false);
+          showHideDash(false);
+
         }}
       >
   <div className={mainDash ? "dashboardsidebarfull" : "dashboardsidebar"}>
