@@ -2,6 +2,7 @@ import "./WebHeader.css";
 
 function WebHeader() {
   return (
+    <>
     <div
       className="webheader"     
     >
@@ -9,6 +10,9 @@ function WebHeader() {
       <h1>Newsfeed</h1>
       <p>Check what your friends have been up to!</p>
     </div>
+    <div id='webheaderoverlay'></div>
+    </>
+
   );
 }
 

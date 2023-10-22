@@ -1,18 +1,21 @@
 .header {
     position: relative;
     z-index: 9;
-    background: white;
+    padding: 1em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    background: #5D5DF5;
 }
 
 .upperNav {
     display: grid;
-    grid-template-columns: 30% 30% 40%;
+    grid-template-columns: 40fr 40fr 20fr;
     z-index: 9999;
 
 }
 
 .upperNav div {
-    border: solid;
+    border: none;
     text-align: center;
 }
 
@@ -65,4 +68,55 @@ button {
     line-height: 260px;
     font-weight: 700;
     border-radius: 30px;
+}
+
+
+.header-menu-list {
+    padding: 0.5em;
+    position: absolute;
+    border: solid;
+    text-align: left;
+
+}
+
+.header-menu-list li {
+    border: none;
+    margin-top: 0.5em;
+}
+
+#headsection-one {
+    border: solid;
+    display: grid;
+    grid-template-columns: 40% 60%;
+}
+
+.header .logo {
+    border: none;
+    display: grid;
+    grid-template-columns: 33% 55% 15%;
+    white-space: nowrap;
+
+}
+.header .search {
+
+    position: relative;
+}
+.header .search input{
+
+width: 60%;
+border-radius: 10px 10px 10px 10px;
+
+}
+
+.header .search .search-icon{
+
+    position: absolute;
+    right: 6.5em;
+
+}
+
+.header .login #login-button{
+    border: solid;
+    width: 30%;
+    text-align: center;
 }

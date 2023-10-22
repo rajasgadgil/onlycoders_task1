@@ -55,9 +55,13 @@ function Header() {
   return (
     <div className="header">
       <div className="upperNav">
-        <div>
-          <div className="logo"></div>
-          <div>
+        <div id="headsection-one">
+          <div className="logo">
+            <img src='/assets/images/header/logo.png' style={{width: '3em'}}/>
+            <h3>Sample Page</h3>
+            <img src='/assets/images/header/header-icon.png'/>
+          </div>
+          <div >
             <ul className="header-list">
               <li>Home</li>
               <li>
@@ -85,6 +89,7 @@ function Header() {
                     </motion.div>
                   </motion.button>
                   <motion.ul
+                  className="header-menu-list"
                     variants={{
                       open: {
                         clipPath: "inset(0% 0% 0% 0% round 10px)",
@@ -142,6 +147,7 @@ function Header() {
                     </motion.div>
                   </motion.button>
                   <motion.ul
+                  className="header-menu-list"
                     variants={{
                       open: {
                         clipPath: "inset(0% 0% 0% 0% round 10px)",
@@ -178,10 +184,10 @@ function Header() {
           </div>
         </div>
         <div className="search">
-          <input />
+          <input placeholder="Enter your search here"/><span class='search-icon'><img src='/assets/images/header/magnify.png' style={{width: '40%'}}/></span>
         </div>
         <div className="login">
-          <button>Login</button>
+          <button id='login-button'>Login</button>
         </div>
       </div>
     </div>

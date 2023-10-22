@@ -2,108 +2,147 @@ import "./Sidebar.css";
 import { motion, animate } from "framer-motion";
 import { useState, useEffect } from "react";
 import DashboardSiderbar from "./DashboardSideBar";
-import OutsideClickHandler from 'react-outside-click-handler';
+import OutsideClickHandler from "react-outside-click-handler";
 
 function Sidebar(props) {
   const [Active, setActive] = useState(false);
   const [mainDash, showHideDash] = useState(false);
   const [clicked, setClicked] = useState(false);
+  const [activeButton, setActiveButton] = useState(null);
+  const [showTitle, setShowTitle] = useState(false);
 
-  const toggleClass = () => {
-    // setActive(!Active);
-    setClicked(!clicked);
-    showHideDash(!mainDash);
+
+  const dashboardicons = [
+    {
+      id: 1,
+      icon: <img src="/assets/images/sidebar_icons/user (1).png" />,
+      title: "Profile",
+    },
+    {
+      id: 2,
+      icon: <img src="/assets/images/sidebar_icons/user (1).png" />,
+      title: "Profile",
+    },
+    {
+      id: 3,
+      icon: <img src="/assets/images/sidebar_icons/user (1).png" />,
+      title: "Profile",
+    },
+    {
+      id: 4,
+      icon: <img src="/assets/images/sidebar_icons/user (1).png" />,
+      title: "Profile",
+    },
+    {
+      id: 5,
+      icon: <img src="/assets/images/sidebar_icons/user (1).png" />,
+      title: "Profile",
+    },
+    {
+      id: 6,
+      icon: <img src="/assets/images/sidebar_icons/user (1).png" />,
+      title: "Profile",
+    },
+    {
+      id: 7,
+      icon: <img src="/assets/images/sidebar_icons/user (1).png" />,
+      title: "Profile",
+    },
+    {
+      id: 8,
+      icon: <img src="/assets/images/sidebar_icons/user (1).png" />,
+      title: "Profile",
+    },
+  ];
+
+  const toggleClass = (buttonId) => {
+    setShowTitle(true);
+    setActive(true);
+    setClicked(true);
+    showHideDash(true);
+    setActiveButton(buttonId)
+   
   };
-  
-  
+
+  const leave = () => {
+
+    setActive(false);
+    setClicked(false);
+    showHideDash(false);
+    setActiveButton(null);
+    setShowTitle(false)
+
+  }
+
   useEffect(() => {
+    setActive(false);
     showHideDash(false);
     setClicked(false);
+    setActiveButton(null)
+    setShowTitle(false)
   }, []);
+
+  
+  
+
   return (
     <>
       <OutsideClickHandler
         onOutsideClick={() => {
+          setActive(false);
           setClicked(false);
           showHideDash(false);
-
+          setActiveButton(null);
+          setShowTitle(false)
         }}
       >
-  <div className={mainDash ? "dashboardsidebarfull" : "dashboardsidebar"}>
-        <ul>
-          <li>
-            <div>
-              <button className={Active ? "active" : ""} onClick={toggleClass}>
-                <img style={{ color: "yellow" }} src="./assets/user.png" />
-              </button>
-            </div>
-            <div>Profile</div>
-          </li>
+        <div
+          className={
+            mainDash ? "clicked dashboardsidebarfull" : "dashboardsidebar"
+          }
+        >
+          <ul>
+            {dashboardicons.map((icons) => {
+              const isActive = activeButton === icons.id;
 
-          <li>
-            <div>
-              <button className={Active ? "active" : ""} onClick={toggleClass}>
-                <img style={{ color: "yellow" }} src="./assets/user.png" />
-              </button>
-            </div>
-            <div>Two</div>
-          </li>
-          <li>
-            <div>
-              <button className={Active ? "active" : ""} onCick={toggleClass}>
-                <img style={{ color: "yellow" }} src="./assets/user.png" />
-              </button>
-            </div>
-            <div> Three</div>
-          </li>
-          <li>
-            <button className={Active ? "active" : ""}>
-              <img style={{ color: "yellow" }} src="./assets/user.png" />
-            </button>
-            Four
-          </li>
-          <li>
-            <button className={Active ? "active" : ""}>
-              <img style={{ color: "yellow" }} src="./assets/user.png" />
-            </button>
-            Five
-          </li>
-          <li>
-            <button className={Active ? "active" : ""}>
-              <img style={{ color: "yellow" }} src="./assets/user.png" />
-            </button>
-            Six
-          </li>
-          <li>
-            <button className={Active ? "active" : ""}>
-              {/* <img style={{ color: "yellow" }} src={image} /> */}
-            </button>
-            Seven
-          </li>
-          <li>
-            <button className={Active ? "active" : ""}>
-              {/* <img style={{ color: "yellow" }} src={image} /> */}
-            </button>
-            Eight
-          </li>
-          <li>
-            <button className={Active ? "active" : ""}>
-              {/* <img style={{ color: "yellow" }} src={image} /> */}
-            </button>
-            Nine
-          </li>
-          <li>
-            <button className={Active ? "active" : ""}>
-              {/* <img style={{ color: "yellow" }} src={image} /> */}
-            </button>
-            Ten
-          </li>
-        </ul>
-      </div>
-      <DashboardSiderbar clicked={clicked} />
+              return (
+                <li>
+                  <div id="sidebnar-navigation" className={isActive ? "active" : ""}
+                       onMouseOver={()=>{toggleClass(icons.id)}}
+                       onMouseLeave={leave}
+                      
+                      > 
+                      
+                  <div
 
+                  >
+
+                  <button
+                      // onClick={()=>{toggleClass(icons.id)}}
+                      onMouseOver={()=>{toggleClass(icons.id)}}
+                      onMouseLeave={leave}
+                    >
+                      {icons.icon}
+                    </button>
+                  </div>
+         
+
+                   <div >
+                        <div className={showTitle ? "title" : "none"}>
+                        {icons.title}
+
+                        </div>
+
+                    </div>
+
+                  </div>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+        <DashboardSiderbar clicked={clicked} />
       </OutsideClickHandler>
-    
     </>
   );
 }
