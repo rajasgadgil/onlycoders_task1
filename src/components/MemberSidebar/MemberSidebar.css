@@ -41,3 +41,7 @@
     display: grid;
     grid-template-columns: 30% 70%;
 }
+.membersidebar ul{
+
+    padding-left: 0!important;
+}

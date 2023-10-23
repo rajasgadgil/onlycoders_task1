@@ -38,41 +38,43 @@ const MemberSidebar = () => {
   let count = 0.1;
 
   return (
-    <div className="membersidebar">
-      <h4>Newest Members</h4>
+    <>
+      <div className="membersidebar">
+        <h4>Newest Members</h4>
 
-      <ul>
-        {newmembers.map((member) => {
-          return (
-            <li>
-              <motion.div
-                initial={{ opacity: 0, scale: 0.1 }}
-                animate={{ opacity: 1, scale: 1 }}
-                whiteInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{
-                  duration: 0.3,
-                  delay: ++count,
-                  ease: [0, 0.61, 0.2, 0.5],
-                }}
-              >
-                <div id="members">
-                  <div
-                    id="profile-image"
-                    style={{ backgroundImage: "url('" + image + "')" }}
-                  ></div>
-                  <div>
-                    {member.name}
-                    <br />
-                    {member.handle}
+        <ul>
+          {newmembers.map((member) => {
+            return (
+              <li>
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.1 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  whiteInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{
+                    duration: 0.3,
+                    delay: ++count,
+                    ease: [0, 0.61, 0.2, 0.5],
+                  }}
+                >
+                  <div id="members">
+                    <div
+                      id="profile-image"
+                      style={{ backgroundImage: "url('" + image + "')" }}
+                    ></div>
+                    <div>
+                      {member.name}
+                      <br />
+                      {member.handle}
+                    </div>
                   </div>
-                </div>
-              </motion.div>
-            </li>
-          );
-        })}
-      </ul>
-    </div>
+                </motion.div>
+              </li>
+            );
+          })}
+        </ul>
+      </div>
+    </>
   );
 };
 

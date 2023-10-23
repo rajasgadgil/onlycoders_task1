@@ -29,7 +29,7 @@ function Feed() {
     }
   }
   return (
-    <div>
+    <>
       <div class="feedHeader">
         <button id="updates">All Updates</button>
         <motion.nav
@@ -38,7 +38,7 @@ function Feed() {
           className="everything-menu"
         >
           <motion.button whileTap={{ scale: 0.97 }} onClick={hideFeatureMenu}>
-          Everything
+            Everything
             <motion.div
               variants={{
                 open: { rotate: 180 },
@@ -80,7 +80,6 @@ function Feed() {
             })}
           </motion.ul>
         </motion.nav>
- 
       </div>
       <div className="Feed">
         <div id="card" className="card-1">
@@ -106,7 +105,7 @@ function Feed() {
           <div className="card-footer"></div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
 

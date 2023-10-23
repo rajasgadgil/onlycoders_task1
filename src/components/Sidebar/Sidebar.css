@@ -1,18 +1,18 @@
 .dashboardsidebar {
-    z-index: 999;
+    z-index: 9;
     border: none;
     width: 4.3%;
     position: absolute;
     height: auto;
     box-sizing: border-box;
     overflow: hidden;
-    transition-duration: 0.5s;
+    transition-duration: 1s;
 }
 
 
 
 .dashboardsidebarfull {
-    transition-duration: 0.5s;
+    transition-duration: 1s;
     z-index: 9;
     border: none;
     width: 15%;
