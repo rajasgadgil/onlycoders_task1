@@ -34,36 +34,39 @@ function PopularGroups() {
   ];
   return (
     <>
-    <div className="popularsection">
-    <h4>Popular Groups</h4>
-    <ul>
-        {groups.map((group) => {
-          return (
-            <li>
-              <div className="populargroups">
-                <div
-                  id="profile-image"
-                  style={{ backgroundImage: "url('assets/profile_pic_1.jpg')" }}
-                ></div>
-                <div>{group.group_name}<br/>{group.group_quantity}</div>
-                <div>
-                {group.group_type == "public" ? (
-                  <img src="assets/access_icons/globe.png" />
-                 
-                ) : (
-                  <img src="assets/access_icons/lock.png" />
-                  
-                )}{" "}
-
+      <div className="popularsection">
+        <h4>Popular Groups</h4>
+        <ul>
+          {groups.map((group) => {
+            return (
+              <li>
+                <div className="populargroups">
+                  <div
+                    id="profile-image"
+                    style={{
+                      backgroundImage: "url('assets/profile_pic_1.jpg')",
+                    }}
+                  ></div>
+                  <div>
+                    <p>
+                      {group.group_name}
+                      <br />
+                      {group.group_quantity}
+                    </p>
+                  </div>
+                  <div>
+                    {group.group_type == "public" ? (
+                      <img src="assets/access_icons/globe.png" />
+                    ) : (
+                      <img src="assets/access_icons/lock.png" />
+                    )}{" "}
+                  </div>
                 </div>
-              
-              </div>
-            </li>
-          );
-        })}
-      </ul>
-    </div>
-
+              </li>
+            );
+          })}
+        </ul>
+      </div>
     </>
   );
 }

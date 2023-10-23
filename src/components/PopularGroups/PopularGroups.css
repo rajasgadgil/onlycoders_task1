@@ -3,16 +3,19 @@
     border-radius: 10px 10px 10px 10px;
     margin-top: 0;
     padding: 1.3em;
-    
+
 }
 
 
 .populargroups {
     background-color: white;
-    padding-top: 1em;
     padding-bottom: 1em;
     display: grid;
     grid-template-columns: 30% 40% 30%;
+}
+
+.populargroups p {
+    white-space: nowrap;
 }
 
 .populargroups img {
@@ -21,6 +24,6 @@
 
 }
 
-.popularsection ul{
-    padding-left: 0!important;
+.popularsection ul {
+    padding-left: 0 !important;
 }

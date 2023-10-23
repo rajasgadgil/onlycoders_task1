@@ -29,8 +29,6 @@
     list-style: none;
 }
 
-
-
 .box {
     width: 150px;
     height: 150px;
@@ -74,8 +72,9 @@ button {
 .header-menu-list {
     padding: 0.5em;
     position: absolute;
-    border: solid;
+    border: none;
     text-align: left;
+
 
 }
 
@@ -85,7 +84,7 @@ button {
 }
 
 #headsection-one {
-    border: solid;
+    border: none;
     display: grid;
     grid-template-columns: 40% 60%;
 }
@@ -97,26 +96,50 @@ button {
     white-space: nowrap;
 
 }
+
 .header .search {
-
     position: relative;
-}
-.header .search input{
-
-width: 60%;
-border-radius: 10px 10px 10px 10px;
 
 }
 
-.header .search .search-icon{
+.header .search input {
+    width: 60%;
+    border: none;
+    border-radius: 30px 30px 30px 30px;
+    background: #4B4AC4;
+    padding: 0.5em;
+}
 
+.header .search input:focus {
+
+    border: none;
+}
+
+.header .search .search-icon {
     position: absolute;
-    right: 6.5em;
-
+    right: 7em;
+    top: 0.35em;
+    cursor: pointer;
 }
 
-.header .login #login-button{
-    border: solid;
+.header .login #login-button {
+    border: none;
     width: 30%;
     text-align: center;
+    background: #00D2E1;
+    color: white;
+    padding: 1em;
+    border-radius: 10px 10px 10px 10px;
+}
+
+.header .logo,
+.header .login,
+.header ul li {
+    cursor: pointer;
+}
+
+.feature-menu button,
+.more-menu button {
+    background: transparent;
+
 }

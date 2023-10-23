@@ -42,9 +42,7 @@ function App({ data = [1, 2, 3] }) {
 
             <Badges />
           </div>
-        </div>
-    
-    <div className="footer">All Rights Reserved</div>
+        </div>   
 
     </div>
 

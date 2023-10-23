@@ -85,24 +85,63 @@ function Feed() {
         <div id="card" className="card-1">
           <div className="card-header">
             <div>
-              <span>Marine Valentine Pro Member</span>replied to the topic{" "}
-              <span>Welcome To the Cosplayers Group Forum!</span> in the forum{" "}
-              <span>Cosplayers Group Forume</span>
+              <p>
+                <strong>Marine Valentine</strong>
+                <img src="/assets/images/feed-icons/blue-tick.png" style={{width: '3%',marginTop: '-0.15rem'}}/>
+                <span
+                  style={{
+                    background: "#5D5DF5",
+                    borderRadius: "20px 20px 20px 20px",
+                    paddingTop: "0.5em",
+                    paddingBottom: "0.5em",
+                    color: "white"
+                  }}
+                >
+                  Pro Member
+                </span>
+                replied to the topic
+                <span> Welcome To the Cosplayers Group Forum! </span> in the
+                forum
+                <span> Cosplayers Group Forume </span>
+                <br />1 year ago
+              </p>
             </div>
-            <div id="header-time">1 year ago</div>
           </div>
           <div className="card-text">Hello Everyone!</div>
-          <div className="card-footer"></div>
+          <div className="card-footer">
+            <div></div>
+            <div>0 Comments</div>
+            <div>0 Shares</div>
+          </div>
         </div>
         <div id="card" className="card-2">
           <div className="card-header">
             <div>
-              <span>Marina Valentine</span>posted an update
+              <p>
+                <strong>Marina Valentine</strong>
+                <img src="/assets/images/feed-icons/blue-tick.png" style={{width: '3%',marginTop: '-0.15rem'}}/>
+                <span
+                  style={{
+                    background: "#5D5DF5",
+                    borderRadius: "20px 20px 20px 20px",
+                    paddingTop: "0.5em",
+                    paddingBottom: "0.5em",
+                    color: "white"
+                  }}
+                >
+                  Pro Member
+                </span>
+                posted an update
+                <br />2 years ago
+              </p>
             </div>
-            <div className="header-time">2 years ago</div>
           </div>
           <div className="card-text">https://www.twitch.tv/blizzard</div>
-          <div className="card-footer"></div>
+          <div className="card-footer">
+            <div></div>
+            <div>0 Comments</div>
+            <div>0 Shares</div>
+          </div>
         </div>
       </div>
     </>

@@ -1,10 +1,17 @@
 .badges{
 border-radius: 10px 10px 10px 10px;
 background: white;
-margin-top: 1.6em;
-  
+margin-top: 1.2em;
+padding: 1.3em;
+margin-bottom: 1.3em;
 }
 
-.badges div{
+.badge-text{display: grid;
+grid-template-columns: 30% 70%;
+
+}
+
+.badge-text div{
+padding-left: 0;
 
 }

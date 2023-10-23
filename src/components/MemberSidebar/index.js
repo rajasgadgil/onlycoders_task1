@@ -17,7 +17,7 @@ const MemberSidebar = () => {
     {
       id: 3,
       name: "Damian Greyson",
-      handle: "@@dgreyson",
+      handle: "@dgreyson",
     },
     {
       id: 4,

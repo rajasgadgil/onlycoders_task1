@@ -1,20 +1,23 @@
-.feedHeader{
-    display:  flex;
+.feedHeader {
+    display: flex;
     justify-content: space-between;
 }
 
-.feedHeader #updates{
-   
-    background: none!important;
+.feedHeader #updates {
+
+    background: none !important;
     border: none;
     border-bottom: solid 0.4em #04D1DF;
+    width: auto;
 
 }
 
-#card, .feedHeader{
-    padding: 2.5em;
-   border: none; 
-   margin-bottom: 1em;
-   background-color: white;
-   border-radius: 15px 15px 15px 15px;;
+#card,
+.feedHeader {
+    padding: 1.5em;
+    border: none;
+    margin-bottom: 1em;
+    background-color: white;
+    border-radius: 15px 15px 15px 15px;
+    ;
 }
