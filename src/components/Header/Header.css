@@ -105,7 +105,7 @@ button {
 .header .search input {
     width: 60%;
     border: none;
-    border-radius: 30px 30px 30px 30px;
+    border-radius: 10px 10px 10px 10px;
     background: #4B4AC4;
     padding: 0.5em;
 }
@@ -129,6 +129,7 @@ button {
     background: #00D2E1;
     color: white;
     padding: 1em;
+    padding-top: 0.5em;
     border-radius: 10px 10px 10px 10px;
 }
 

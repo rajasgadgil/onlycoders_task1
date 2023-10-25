@@ -187,7 +187,7 @@ function Header() {
           <input placeholder="Enter your search here"/><span class='search-icon'><img src='/assets/images/header/magnify.png' style={{width: '40%'}}/></span>
         </div>
         <div className="login">
-          <button id='login-button'>Login</button>
+          <button id='login-button'><p style={{width: '100%',height:'0'}}>Login</p></button>
         </div>
       </div>
     </div>
