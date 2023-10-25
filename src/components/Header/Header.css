@@ -145,6 +145,7 @@ button {
 
 }
 
+/* Media Queries for responsiveness */
 
 @media (max-width: 991px){
     .upperNav .header-list {display: none;}

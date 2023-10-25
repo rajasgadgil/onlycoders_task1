@@ -1,3 +1,5 @@
+// WebHeader Component
+
 import "./WebHeader.css";
 import MediaQuery from "react-responsive";
 import { useMediaQuery } from 'react-responsive'

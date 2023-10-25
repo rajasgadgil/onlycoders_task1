@@ -1,3 +1,5 @@
+// Feed Component
+
 import "./Feed.css";
 import "../MemberSidebar/MemberSidebar.css";
 import Dropdown from "react-bootstrap/Dropdown";
@@ -6,6 +8,8 @@ import { motion, Variants } from "framer-motion";
 import { useState } from "react";
 import OutsideClickHandler from "react-outside-click-handler";
 function Feed() {
+
+  // hide and show Everything dropdown 
   const [isOpenFeature, setIsOpenFeature] = useState(false);
   
   const featurelist = [
@@ -30,12 +34,14 @@ function Feed() {
     <>
       <div class="feedHeader">
         <button id="updates">All Updates</button>
+        {/* Close dropdown using OutsideClickHandler package */}
         <OutsideClickHandler 
         onOutsideClick={()=>{
           setIsOpenFeature(false)
 
         }}
         ></OutsideClickHandler>
+        {/* on click display dropdown using Framer Motion Animation */}
         <motion.nav
           initial={false}
           animate={isOpenFeature ? "open" : "closed"}
@@ -88,7 +94,7 @@ function Feed() {
       <div className="Feed">
         <div id="card" className="card-1">
           <div className="card-header">
-            <div style={{ display: "grid", gridTemplateColumns: "15% 85%" }}>
+            <div id="card-section">
               <div>
                 <div id="profile-feed">
                   <div

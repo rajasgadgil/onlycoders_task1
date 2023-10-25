@@ -77,6 +77,26 @@
     clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 }
 
+
+/* Media Queries for responsiveness */
+
 @media (max-width: 1200px) and (min-width: 991px){
     #members {display: block;}
+    #profile-outer{
+        width: 45%;
+
+    }
+}
+@media (max-width: 1399px) and (min-width: 991px){
+    #members {display: flex;
+    justify-content: space-evenly;
+    }
+
+    #profile-outer{
+        width:34%;        
+    }
+}
+
+@media(max-width: 767px){
+    #profile-feed{display: none;}
 }

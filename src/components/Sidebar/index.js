@@ -1,3 +1,5 @@
+// Sidebar Component
+
 import "./Sidebar.css";
 import { motion, animate } from "framer-motion";
 import { useState, useEffect } from "react";

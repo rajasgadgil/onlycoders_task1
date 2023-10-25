@@ -1,7 +1,12 @@
+// Member Sidebar Component
+
 import "./MemberSidebar.css";
 import { animated, motion } from "framer-motion";
 
 const MemberSidebar = () => {
+
+// Data for Members Sidebar
+
   const newmembers = [
     {
       id: 1,

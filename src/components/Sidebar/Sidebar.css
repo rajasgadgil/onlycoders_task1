@@ -88,7 +88,7 @@
     padding: 0.5em;
 
 }
-
+/* Media Queries for responsiveness */
 @media (max-width: 991px){   
 .dashboardsidebar ul, .dashboardsidebarfull ul {
         padding: 0em;

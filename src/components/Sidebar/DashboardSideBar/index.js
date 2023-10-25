@@ -1,3 +1,5 @@
+// Inner Sidebar Component
+
 import { useEffect, useState } from "react";
 import "./DashboardSidebar.css";
 import "bootstrap/dist/css/bootstrap.min.css";

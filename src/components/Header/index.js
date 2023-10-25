@@ -1,3 +1,6 @@
+// Header Component
+
+
 import "bootstrap/dist/css/bootstrap.css";
 import "./Header.css";
 import { useState } from "react";
@@ -8,16 +11,12 @@ import { useMediaQuery } from 'react-responsive';
 import OutsideClickHandler from "react-outside-click-handler";
 
 function Header() {
+  
+  //Media queries using React Responsive Package
+
   const isTabletOrMobile = useMediaQuery({ query: '(max-width: 991px)' });
 
-  const variants = {
-    open: {
-      opacity: 1,
-      y: 0,
-      transition: { type: "spring", stiffness: 300, damping: 24 },
-    },
-    closed: { opacity: 0, y: 20, transition: { duration: 0.2 } },
-  };
+  // hide and show Dropdowns
 
   const [isOpenMore, setIsOpenMore] = useState(false);
   const [isOpenFeature, setIsOpenFeature] = useState(false);
@@ -34,6 +33,8 @@ function Header() {
       setIsOpenFeature(false);
     }
   }
+
+// Variants declaration for Framer Motion Animation of Dropdown Menu
 
   const itemVariants = {
     open: {
@@ -66,6 +67,8 @@ function Header() {
             <img src='/assets/images/header/header-icon.png'/>
           </div>
           <div >
+           {/* Close dropdowns using OutsideClickHandler package */}
+
             <OutsideClickHandler
             onOutsideClick={() => {
               setIsOpenMore(false)

@@ -64,6 +64,7 @@
     padding-top: 3em;
 }
 
+/* Media Queries for responsiveness */
 
 @media (max-width:767px){
     .webheader .webheader-content #webheaderimage {

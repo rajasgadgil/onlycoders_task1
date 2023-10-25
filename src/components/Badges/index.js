@@ -1,3 +1,6 @@
+// Badges Component
+
+
 import "./Badges.css";
 
 const Badges = () => {

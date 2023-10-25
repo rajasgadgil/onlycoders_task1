@@ -1,9 +1,27 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+SAMPLE PAGE FOR ONLY CODERS FULL STACK DEVELOPER POSITION TEST
 
-## Available Scripts
 
-In the project directory, you can run:
+Environment:
 
-### `npm start`
+React JS 
+Node JS 
+HTML5
+CSS3
+JavaScript ES6 fundamentals
+Bootstrap
+
+# Packages Used
+
+Framer Motion JS
+React Responsive
+Outside Click Handler
+React Bootstrap
+
+
+
+# Fonts
+
+Teko Google Font
+https://fonts.google.com/specimen/Teko?preview.text=Newsfeed&query=teko

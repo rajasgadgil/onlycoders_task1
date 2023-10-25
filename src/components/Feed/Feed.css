@@ -23,10 +23,31 @@
 }
 
 
-.card-footer{    
+.card-footer {
     display: grid;
     grid-template-columns: 70% 15% 15%;
     margin-top: 1em;
     border-top: solid 2pt #EDEDF6;
     padding-top: 1em;
+}
+
+
+#card-section {
+    display: grid;
+    grid-template-columns: 15% 85%;
+}
+
+
+/* Media Queries for responsiveness */
+
+@media (max-width: 767px) {
+
+    #card-section {
+        display: block;
+    }
+
+    #profile-feed {
+        display: none;
+    }
+
 }

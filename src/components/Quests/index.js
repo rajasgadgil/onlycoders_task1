@@ -1,3 +1,5 @@
+// Quests Component
+
 import "./Quests.css";
 
 const Quests = () => {

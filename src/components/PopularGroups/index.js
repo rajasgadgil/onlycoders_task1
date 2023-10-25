@@ -1,3 +1,5 @@
+// Popular Groups Component
+
 import "./PopularGroups.css";
 function PopularGroups() {
   const groups = [

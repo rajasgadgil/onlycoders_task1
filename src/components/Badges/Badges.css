@@ -16,7 +16,8 @@ padding-left: 0;
 
 }
 
+/* Media Queries for responsiveness */
+
 @media(max-width: 1399px){
     .badge-text{display: block;}
-
 }
