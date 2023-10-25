@@ -25,3 +25,8 @@ React Bootstrap
 
 Teko Google Font
 https://fonts.google.com/specimen/Teko?preview.text=Newsfeed&query=teko
+
+
+# Optimization
+
+Implemented Lazy Loading of Components to optimise website performance using React.lazy
