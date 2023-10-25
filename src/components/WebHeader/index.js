@@ -1,20 +1,26 @@
 import "./WebHeader.css";
+import MediaQuery from "react-responsive";
+import { useMediaQuery } from 'react-responsive'
+
 
 function WebHeader() {
+
+  const isTabletOrMobile = useMediaQuery({ query: '(max-width: 767px)' });
+
   return (
     <>
       <div className="webheader">
         <div className="webheader-content">
-          <div>
+          <div >
             <div>
               <img id="webheaderimage" src={"/assets/computer.png"} />
             </div>
             <div>
-              <img src={"/assets/computer.png"} style={{ width: "80%" }} />
+              {isTabletOrMobile ? '': <img src={"/assets/computer.png"} style={{ width: "80%" }} />}
             </div>
           </div>
 
-          <div>
+          <div >
             <h1>Newsfeed</h1>
             <p>Check what your friends have been up to!</p>
           </div>

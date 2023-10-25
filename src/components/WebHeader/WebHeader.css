@@ -5,7 +5,7 @@
     background-position: center;
     background-size: cover;
     display: flex;
-    background-image: url('/public/assets/Groupe_people_01_01S.jpg');
+    background-image: url('/public/assets/Groupe_people_01_01S.jpg')!important;
     margin-bottom: 1em;
     margin-top: 2em;
 }
@@ -39,9 +39,9 @@
 
 .webheader .webheader-content {
     display: grid;
-    z-index: 1;
+    z-index: 1 !important;
     position: relative;
-    grid-template-columns: 38% 62%;
+    grid-template-columns: 38% 70%;
 }
 
 #webheaderoverlay_second {
@@ -57,4 +57,15 @@
     background-size: cover;
     margin-bottom: 1em;
     z-index: 0;
+}
+
+
+@media (max-width:767px){
+    .webheader .webheader-content #webheaderimage {
+        position: static;
+        height: 100%;
+        width: 100%;
+    }
+
+
 }

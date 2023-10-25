@@ -59,9 +59,18 @@ const MemberSidebar = () => {
                 >
                   <div id="members">
                     <div
+                      id="profile-outer"
+                    >     
+                   <div
                       id="profile-image"
                       style={{ backgroundImage: "url('" + image + "')" }}
-                    ></div>
+
+                    >  
+
+                    </div>                 
+                    </div>
+
+    
                     <div>
                       {member.name}
                       <br />

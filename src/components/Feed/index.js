@@ -1,4 +1,5 @@
 import "./Feed.css";
+import "../MemberSidebar/MemberSidebar.css";
 import Dropdown from "react-bootstrap/Dropdown";
 import DropdownButton from "react-bootstrap/DropdownButton";
 import { motion, Variants } from "framer-motion";
@@ -7,7 +8,7 @@ import { useState } from "react";
 function Feed() {
   const [isOpenMore, setIsOpenMore] = useState(false);
   const [isOpenFeature, setIsOpenFeature] = useState(false);
-
+  
   const featurelist = [
     { id: 1, name: "Everything" },
     { id: 2, name: "Everything" },
@@ -84,17 +85,32 @@ function Feed() {
       <div className="Feed">
         <div id="card" className="card-1">
           <div className="card-header">
-            <div>
+            <div style={{ display: "grid", gridTemplateColumns: "15% 85%" }}>
+              <div>
+                <div id="profile-feed">
+                  <div
+                    id="profile-image-feed"
+                    style={{
+                      backgroundImage: "url('assets/profile_pic_1.jpg')",
+                    }}
+                  ></div>
+                </div>
+              </div>
+            <div>          
+              
               <p>
                 <strong>Marine Valentine</strong>
-                <img src="/assets/images/feed-icons/blue-tick.png" style={{width: '3%',marginTop: '-0.15rem'}}/>
+                <img
+                  src="/assets/images/feed-icons/blue-tick.png"
+                  style={{ width: "3%", marginTop: "-0.15rem" }}
+                />
                 <span
                   style={{
                     background: "#5D5DF5",
                     borderRadius: "20px 20px 20px 20px",
                     paddingTop: "0.5em",
                     paddingBottom: "0.5em",
-                    color: "white"
+                    color: "white",
                   }}
                 >
                   Pro Member
@@ -104,29 +120,45 @@ function Feed() {
                 forum
                 <span> Cosplayers Group Forume </span>
                 <br />1 year ago
-              </p>
+              </p></div>
             </div>
           </div>
           <div className="card-text">Hello Everyone!</div>
           <div className="card-footer">
-            <div></div>
+            <div>
+              <img src="/assets/images/feed-icons/smiley.png" />
+            </div>
             <div>0 Comments</div>
             <div>0 Shares</div>
           </div>
         </div>
         <div id="card" className="card-2">
           <div className="card-header">
+          <div style={{ display: "grid", gridTemplateColumns: "15% 85%" }}>
             <div>
+                <div id="profile-feed">
+                  <div
+                    id="profile-image-feed"
+                    style={{
+                      backgroundImage: "url('assets/profile_pic_1.jpg')",
+                    }}
+                  ></div>
+                </div>
+              </div>
+            <div>  
               <p>
                 <strong>Marina Valentine</strong>
-                <img src="/assets/images/feed-icons/blue-tick.png" style={{width: '3%',marginTop: '-0.15rem'}}/>
+                <img
+                  src="/assets/images/feed-icons/blue-tick.png"
+                  style={{ width: "3%", marginTop: "-0.15rem" }}
+                />
                 <span
                   style={{
                     background: "#5D5DF5",
                     borderRadius: "20px 20px 20px 20px",
                     paddingTop: "0.5em",
                     paddingBottom: "0.5em",
-                    color: "white"
+                    color: "white",
                   }}
                 >
                   Pro Member
@@ -134,6 +166,7 @@ function Feed() {
                 posted an update
                 <br />2 years ago
               </p>
+              </div>
             </div>
           </div>
           <div className="card-text">https://www.twitch.tv/blizzard</div>

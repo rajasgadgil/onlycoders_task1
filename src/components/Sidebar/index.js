@@ -5,12 +5,11 @@ import DashboardSiderbar from "./DashboardSideBar";
 import OutsideClickHandler from "react-outside-click-handler";
 
 function Sidebar(props) {
-  const [Active, setActive] = useState(false);
   const [mainDash, showHideDash] = useState(false);
   const [clicked, setClicked] = useState(false);
-  const [activeButton, setActiveButton] = useState(null);
+  const [activeButton, setActiveButton] = useState(1);
   const [showTitle, setShowTitle] = useState(false);
-
+  console.log(activeButton)
 
   const dashboardicons = [
     {
@@ -21,64 +20,62 @@ function Sidebar(props) {
     {
       id: 2,
       icon: <img src="/assets/images/sidebar_icons/user (1).png" />,
-      title: "Profile",
+      title: "Newest Members",
     },
     {
       id: 3,
       icon: <img src="/assets/images/sidebar_icons/user (1).png" />,
-      title: "Profile",
+      title: "Popular Groups",
     },
     {
       id: 4,
       icon: <img src="/assets/images/sidebar_icons/user (1).png" />,
-      title: "Profile",
+      title: "Settings",
     },
     {
       id: 5,
       icon: <img src="/assets/images/sidebar_icons/user (1).png" />,
-      title: "Profile",
+      title: "Privacy",
     },
     {
       id: 6,
       icon: <img src="/assets/images/sidebar_icons/user (1).png" />,
-      title: "Profile",
+      title: "FAQ",
     },
     {
       id: 7,
       icon: <img src="/assets/images/sidebar_icons/user (1).png" />,
-      title: "Profile",
+      title: "Contact",
     },
     {
       id: 8,
       icon: <img src="/assets/images/sidebar_icons/user (1).png" />,
-      title: "Profile",
+      title: "Career",
     },
   ];
 
   const toggleClass = (buttonId) => {
-    setShowTitle(true);
-    setActive(true);
-    setClicked(true);
+    console.log(buttonId)
     showHideDash(true);
-    setActiveButton(buttonId)
+    setActiveButton(buttonId);
+    setShowTitle(true);
+    setClicked(true);
+
    
   };
 
   const leave = () => {
-
-    setActive(false);
-    setClicked(false);
     showHideDash(false);
-    setActiveButton(null);
-    setShowTitle(false)
+    setShowTitle(false);
+    setClicked(false);
+
 
   }
 
   useEffect(() => {
-    setActive(false);
     showHideDash(false);
     setClicked(false);
-    setActiveButton(null)
+    setActiveButton(1)
     setShowTitle(false)
   }, []);
 
@@ -87,12 +84,11 @@ function Sidebar(props) {
 
   return (
     <>
-      <OutsideClickHandler
+
+    <OutsideClickHandler
         onOutsideClick={() => {
-          setActive(false);
           setClicked(false);
           showHideDash(false);
-          setActiveButton(null);
           setShowTitle(false)
         }}
       >
@@ -104,14 +100,12 @@ function Sidebar(props) {
           <ul>
             {dashboardicons.map((icons) => {
               const isActive = activeButton === icons.id;
-
               return (
-                <li>
+                <li        
+                >
                   <div id="sidebnar-navigation" className={isActive ? "active" : ""}
-                       onMouseOver={()=>{toggleClass(icons.id)}}
-                       onMouseLeave={leave}
-                      
-                      > 
+                       onClick={()=>{toggleClass(icons.id)}}
+                  > 
                       
                   <div
 
@@ -119,8 +113,6 @@ function Sidebar(props) {
 
                   <button
                       // onClick={()=>{toggleClass(icons.id)}}
-                      onMouseOver={()=>{toggleClass(icons.id)}}
-                      onMouseLeave={leave}
                     >
                       {icons.icon}
                     </button>
@@ -128,7 +120,9 @@ function Sidebar(props) {
          
 
                    <div >
-                        <div className={showTitle ? "title" : "none"}>
+                        <div className={showTitle ? "title" : "none"}
+                        
+                        >
                         {icons.title}
 
                         </div>
@@ -141,8 +135,11 @@ function Sidebar(props) {
             })}
           </ul>
         </div>
-        <DashboardSiderbar clicked={clicked} />
+        <DashboardSiderbar clicked={clicked}/>
       </OutsideClickHandler>
+
+   
+
     </>
   );
 }

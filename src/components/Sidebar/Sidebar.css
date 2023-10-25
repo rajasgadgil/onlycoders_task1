@@ -1,35 +1,39 @@
 .dashboardsidebar {
     z-index: 9;
     border: none;
-    width: 4.3%;
+    width: 4.5%;
     position: absolute;
     height: auto;
     box-sizing: border-box;
     overflow: hidden;
-    transition-duration: 1s;
+    transition-duration: 0.5s;
 }
 
 
 
 .dashboardsidebarfull {
-    transition-duration: 1s;
+    transition-duration: 0.5s;
+    overflow: hidden;
     z-index: 9;
     border: none;
     width: 15%;
     position: absolute;
     box-sizing: border-box;
+
 }
 
 
 .active {
-    transition-duration: 1s;
+    transition-duration: 0.5s;
+    width: 100%;
+    overflow: hidden;
     background-color: #00D2E1;
     box-shadow: 10px 10px 10px #D8F8FB;
-    opacity: 1;
+
 }
 
 #sidebnar-navigation {
-    transition-duration:1s;
+    transition-duration: 0.7s;
     border: none;
     border-radius: 10px 10px 10px 10px;
     display: grid;
@@ -39,19 +43,23 @@
 
 }
 
-#sidebnar-navigation button{
+#sidebnar-navigation button {
     background: transparent;
 
 }
+
+
 .none {
-    transition-duration: 1s;
+    transition-duration: 0.5s;
+    width: 0;
     display: none
 }
-.title{
-    transition-delay: 1s;
+
+.title {
     display: block;
 
 }
+
 .dashboardsidebar li,
 .dashboardsidebarfull li {
     margin-top: 1em;
@@ -60,4 +68,14 @@
 .dashboardsidebar ul,
 .dashboardsidebarfull ul {
     padding-left: 0.5em;
+    transition-duration: 0.5s;
+}
+
+#sidebnar-navigation:hover {
+    transition-duration: 0s;
+    width: 100%;
+    overflow: hidden;
+    background-color: #00D2E1;
+    box-shadow: 10px 10px 10px #D8F8FB;
+
 }
