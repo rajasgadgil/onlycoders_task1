@@ -4,8 +4,12 @@ import { useState } from "react";
 import { motion, Variants } from "framer-motion";
 import Dropdown from "react-bootstrap/Dropdown";
 import DropdownButton from "react-bootstrap/DropdownButton";
+import { useMediaQuery } from 'react-responsive';
+import OutsideClickHandler from "react-outside-click-handler";
 
 function Header() {
+  const isTabletOrMobile = useMediaQuery({ query: '(max-width: 991px)' });
+
   const variants = {
     open: {
       opacity: 1,
@@ -62,6 +66,13 @@ function Header() {
             <img src='/assets/images/header/header-icon.png'/>
           </div>
           <div >
+            <OutsideClickHandler
+            onOutsideClick={() => {
+              setIsOpenMore(false)
+              setIsOpenFeature(false)
+
+            }}
+            >
             <ul className="header-list">
               <li>Home</li>
               <li>
@@ -102,7 +113,7 @@ function Header() {
                         },
                       },
                       closed: {
-                        //  clipPath: "inset(10% 50% 90% 50% round 10px)",
+                        clipPath: "inset(10% 50% 90% 50% round 10px)",
                         transition: {
                           type: "spring",
                           bounce: 0,
@@ -110,7 +121,7 @@ function Header() {
                         },
                       },
                     }}
-                    style={{ pointerEvents: isOpenFeature ? "auto" : "none" }}
+                    style={{ pointerEvents: isOpenFeature ? "auto" : "none",background: isOpenFeature ? "white" : "none"  }}
                   >
                     {featurelist.map((feature) => {
                       return (
@@ -160,7 +171,7 @@ function Header() {
                         },
                       },
                       closed: {
-                        //  clipPath: "inset(10% 50% 90% 50% round 10px)",
+                        clipPath: "inset(10% 50% 90% 50% round 10px)",
                         transition: {
                           type: "spring",
                           bounce: 0,
@@ -168,7 +179,7 @@ function Header() {
                         },
                       },
                     }}
-                    style={{ pointerEvents: isOpenMore ? "auto" : "none" }}
+                    style={{ pointerEvents: isOpenMore ? "auto" : "none",background: isOpenMore ? "white" : "none"  }}
                   >
                     {morelist.map((more) => {
                       return (
@@ -181,10 +192,13 @@ function Header() {
                 </motion.nav>
               </li>
             </ul>
+
+            </OutsideClickHandler>
+    
           </div>
         </div>
         <div className="search">
-          <input placeholder="Enter your search here"/><span class='search-icon'><img src='/assets/images/header/magnify.png' style={{width: '40%'}}/></span>
+          <input placeholder="Enter your search here" style={{backgroundImage:'url(/assets/images/header/search.png)',backgroundRepeat:'no-repeat',backgroundPosition: 'right',backgroundOrigin:'content-box'}}/>
         </div>
         <div className="login">
           <button id='login-button'><p style={{width: '100%',height:'0'}}>Login</p></button>

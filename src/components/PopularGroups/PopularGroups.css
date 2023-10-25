@@ -27,3 +27,8 @@
 .popularsection ul {
     padding-left: 0 !important;
 }
+
+@media (max-width: 1200px) and (min-width: 991px){
+    .populargroups {display: block}
+    .populargroups img {display: none;}
+}

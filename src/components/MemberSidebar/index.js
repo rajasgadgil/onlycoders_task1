@@ -1,4 +1,3 @@
-import image from "./profile_pic_1.jpg";
 import "./MemberSidebar.css";
 import { animated, motion } from "framer-motion";
 
@@ -63,7 +62,7 @@ const MemberSidebar = () => {
                     >     
                    <div
                       id="profile-image"
-                      style={{ backgroundImage: "url('" + image + "')" }}
+                      style={{ backgroundImage: "url('/assets/profile_pic_1.jpg')" }}
 
                     >  
 

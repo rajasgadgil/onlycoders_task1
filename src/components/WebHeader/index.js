@@ -11,7 +11,7 @@ function WebHeader() {
     <>
       <div className="webheader">
         <div className="webheader-content">
-          <div >
+          <div>
             <div>
               <img id="webheaderimage" src={"/assets/computer.png"} />
             </div>
@@ -20,7 +20,7 @@ function WebHeader() {
             </div>
           </div>
 
-          <div >
+          <div id='newsfeed-header'>
             <h1>Newsfeed</h1>
             <p>Check what your friends have been up to!</p>
           </div>

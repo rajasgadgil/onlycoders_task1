@@ -59,6 +59,11 @@
     z-index: 0;
 }
 
+#newsfeed-header{
+
+    padding-top: 3em;
+}
+
 
 @media (max-width:767px){
     .webheader .webheader-content #webheaderimage {
@@ -66,6 +71,9 @@
         height: 100%;
         width: 100%;
     }
+    #newsfeed-header{
+        padding-top: 0;
 
+    }
 
 }

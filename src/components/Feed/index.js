@@ -4,9 +4,8 @@ import Dropdown from "react-bootstrap/Dropdown";
 import DropdownButton from "react-bootstrap/DropdownButton";
 import { motion, Variants } from "framer-motion";
 import { useState } from "react";
-
+import OutsideClickHandler from "react-outside-click-handler";
 function Feed() {
-  const [isOpenMore, setIsOpenMore] = useState(false);
   const [isOpenFeature, setIsOpenFeature] = useState(false);
   
   const featurelist = [
@@ -25,14 +24,18 @@ function Feed() {
   };
   function hideFeatureMenu() {
     setIsOpenFeature(!isOpenFeature);
-    if (isOpenMore == true && isOpenFeature == false) {
-      setIsOpenMore(false);
-    }
+  
   }
   return (
     <>
       <div class="feedHeader">
         <button id="updates">All Updates</button>
+        <OutsideClickHandler 
+        onOutsideClick={()=>{
+          setIsOpenFeature(false)
+
+        }}
+        ></OutsideClickHandler>
         <motion.nav
           initial={false}
           animate={isOpenFeature ? "open" : "closed"}
@@ -74,7 +77,7 @@ function Feed() {
                 },
               },
             }}
-            style={{ pointerEvents: isOpenFeature ? "auto" : "none" }}
+            style={{ pointerEvents: isOpenFeature ? "auto" : "none",position:'absolute',background: isOpenFeature ? "#5D5DF5" : "",padding: '1em' }}
           >
             {featurelist.map((feature) => {
               return <motion.li variants={variants}>{feature.name} </motion.li>;
@@ -108,8 +111,9 @@ function Feed() {
                   style={{
                     background: "#5D5DF5",
                     borderRadius: "20px 20px 20px 20px",
-                    paddingTop: "0.5em",
-                    paddingBottom: "0.5em",
+                    padding: "0.5em",
+                    paddingTop: "0.3em",
+                    paddingBottom: "0.3em",
                     color: "white",
                   }}
                 >
@@ -126,7 +130,7 @@ function Feed() {
           <div className="card-text">Hello Everyone!</div>
           <div className="card-footer">
             <div>
-              <img src="/assets/images/feed-icons/smiley.png" />
+              <img src="/assets/images/feed-icons/smiley.png" style={{width:'1.5rem'}}/>
             </div>
             <div>0 Comments</div>
             <div>0 Shares</div>
@@ -156,8 +160,9 @@ function Feed() {
                   style={{
                     background: "#5D5DF5",
                     borderRadius: "20px 20px 20px 20px",
-                    paddingTop: "0.5em",
-                    paddingBottom: "0.5em",
+                    padding: "0.5em",
+                    paddingTop: "0.3em",
+                    paddingBottom: "0.3em",
                     color: "white",
                   }}
                 >
@@ -169,7 +174,10 @@ function Feed() {
               </div>
             </div>
           </div>
-          <div className="card-text">https://www.twitch.tv/blizzard</div>
+          <div className="card-text">https://www.twitch.tv/blizzard
+          <br/>
+          <img src='/assets/images/feed-icons/dota.jpg' style={{width: '100%'}}/>
+          </div>
           <div className="card-footer">
             <div></div>
             <div>0 Comments</div>

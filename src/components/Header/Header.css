@@ -144,3 +144,16 @@ button {
     background: transparent;
 
 }
+
+
+@media (max-width: 991px){
+    .upperNav .header-list {display: none;}
+    .upperNav {
+        grid-template-columns: 30fr 50% 20%;
+
+    }
+   .upperNav .logo {
+    grid-template-columns: 33fr 33fr 33fr;
+    column-gap: 20px;
+    }
+}
